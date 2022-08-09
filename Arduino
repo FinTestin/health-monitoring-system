@@ -1,4 +1,3 @@
-
 #define analogTem 35
 #include <WiFi.h>
 #include <Wire.h>
