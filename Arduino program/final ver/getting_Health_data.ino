@@ -7,7 +7,7 @@
 
 #define WIFI_SSID "Wifi" // Change the name of your WIFI
 #define WIFI_PASSWORD "password" // Change the password of your WIFI
-#define FIREBASE_HOST "https://fyp-test-c34d8-default-rtdb.firebaseio.com/"
+#define FIREBASE_HOST "your api key"
 #define FIREBASE_Authorization_key "FIREBASE_Authorization_key"
 
 MAX30105 particleSensor;
