@@ -21,8 +21,6 @@ Firebase
 
 Firebase acts as an iot data relay point, receive all the data come form controller senor or the Apps data.
 
-![firebase data](https://user-images.githubusercontent.com/72807493/183590847-b7b3f3b1-3159-468c-921e-fc305cd007c8.png)
-
 physical devices
 
 Put all the hardware parts in the box
