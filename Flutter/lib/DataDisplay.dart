@@ -469,11 +469,7 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
     print("*** user isAnonymous: ${user.isAnonymous}");
     print("*** user uid: ${user.uid}");
     setState(() {
-      if (user != null) {
-        _login = true;
-      } else {
-        _login = false;
-      }
+      _login = user != null;
     });
   }
 
@@ -489,30 +485,26 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
   }
 
   void _handleRadioTextValueChange(int value) {
-    setState(() {
-      _radioTextValue = value;
-      if (_radioTextValue == 0) {
-        return textSizeChange =0.8;
-      } else if (_radioTextValue == 1) {
-        return textSizeChange =1;
-      } else if (_radioTextValue == 2) {
-        return textSizeChange =1.2;
-      }
-    });
+  setState(() {
+    _radioTextValue = value;
+    switch (_radioTextValue) {
+      case 0:
+        textSizeChange = 0.8;
+        break;
+      case 1:
+        textSizeChange = 1;
+        break;
+      case 2:
+        textSizeChange = 1.2;
+        break;
+    }
+  });
   }
 
   void _handleRadioLanguageValueChange(int value) {
-    setState(() {
-      _radioLanguageValue = value;
-      if (_radioLanguageValue == 0) {
-        setState(() {
-          theLocate = 'zh';
-        });
-      } else if (_radioLanguageValue == 1) {
-        setState(() {
-          theLocate = 'en';
-        });
-      }
-    });
+  setState(() {
+    _radioLanguageValue = value;
+    theLocate = (_radioLanguageValue == 0) ? 'zh' : 'en';
+  });
   }
 }
