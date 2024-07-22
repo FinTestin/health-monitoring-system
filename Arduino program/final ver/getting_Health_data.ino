@@ -24,9 +24,9 @@ FirebaseData firebaseData;
 FirebaseJson json;
 
 uint32_t tsLastReport = 0;
-void onBeatDetected(){
-    Serial.println("Beat Detected!");
-}
+//void onBeatDetected(){
+//    Serial.println("Beat Detected!");
+//}
 void connectToNetwork(){
   //Serial.println("Connected to network");
   //Serial.println(WIFI_SSID);
