@@ -24,20 +24,6 @@ FirebaseData firebaseData;
 FirebaseJson json;
 
 uint32_t tsLastReport = 0;
-//void onBeatDetected(){
-//    Serial.println("Beat Detected!");
-//}
-void connectToNetwork(){
-  //Serial.println("Connected to network");
-  //Serial.println(WIFI_SSID);
-  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-  while (WiFi.status() != WL_CONNECTED){
-    delay(500);
-    //Serial.println("Establishing connection to WiFi..");
-  }
-  //Serial.print("IP Address: ");
-  //Serial.println(WiFi.localIP());
-}
 
 void MAX30102pox(){
     if (!particleSensor.begin(Wire, I2C_SPEED_FAST)){ //Use default I2C port, 400kHz speed
@@ -52,7 +38,11 @@ void MAX30102pox(){
 void setup(){
     Serial.begin(115200);
     //wifi connect____________________________________________
-    connectToNetwork();
+    WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+    while (WiFi.status() != WL_CONNECTED){
+      delay(500);
+      //Serial.println("Establishing connection to WiFi..");
+    }
     //MAX30102 connect________________________________________
     MAX30102pox();
     //firebase connect________________________________________
