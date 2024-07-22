@@ -5,10 +5,10 @@
 #include "MAX30105.h"
 #include "heartRate.h"
 
-#define WIFI_SSID "Wifi" // Change the name of your WIFI
-#define WIFI_PASSWORD "password" // Change the password of your WIFI
-#define FIREBASE_HOST "your api key"
-#define FIREBASE_Authorization_key "FIREBASE_Authorization_key"
+#define WIFI_SSID "your_SSID" // your WIFI
+#define WIFI_PASSWORD "your_PASSWORD" //  your WIFI Password
+#define FIREBASE_HOST "your_firebase_database_url"
+#define FIREBASE_Authorization_key "your_firebase_database_secret"
 
 MAX30105 particleSensor;
 const byte RATE_SIZE = 4; //Increase this for more averaging. 4 is good.
