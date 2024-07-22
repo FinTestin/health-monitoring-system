@@ -35,8 +35,8 @@ void connectToNetwork(){
     delay(500);
     Serial.println("Establishing connection to WiFi..");
   }
-  Serial.print("IP Address: ");
-  Serial.println(WiFi.localIP());
+  //Serial.print("IP Address: ");
+  //Serial.println(WiFi.localIP());
 }
 
 void MAX30102pox(){
