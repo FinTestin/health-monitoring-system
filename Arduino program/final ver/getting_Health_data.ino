@@ -28,12 +28,12 @@ void onBeatDetected(){
     Serial.println("Beat Detected!");
 }
 void connectToNetwork(){
-  Serial.println("Connected to network");
-  Serial.println(WIFI_SSID);
+  //Serial.println("Connected to network");
+  //Serial.println(WIFI_SSID);
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
   while (WiFi.status() != WL_CONNECTED){
     delay(500);
-    Serial.println("Establishing connection to WiFi..");
+    //Serial.println("Establishing connection to WiFi..");
   }
   //Serial.print("IP Address: ");
   //Serial.println(WiFi.localIP());
@@ -41,10 +41,10 @@ void connectToNetwork(){
 
 void MAX30102pox(){
     if (!particleSensor.begin(Wire, I2C_SPEED_FAST)){ //Use default I2C port, 400kHz speed
-      Serial.println("MAX30105 was not found. Please check wiring/power. ");
+      //Serial.println("MAX30105 was not found. Please check wiring/power. ");
       while (1);
     }
-    Serial.println("Place your index finger on the sensor with steady pressure.");
+    //Serial.println("Place your index finger on the sensor with steady pressure.");
     particleSensor.setup(); //Configure sensor with default settings
     particleSensor.setPulseAmplitudeRed(0x0A); //Turn Red LED to low to indicate sensor is running
     particleSensor.setPulseAmplitudeGreen(0); //Turn off Green LED
@@ -82,10 +82,10 @@ void loop(){
       Firebase.setFloat(firebaseData,"/ESP32/Temperature", TempData);  
     }
   }
-  Serial.print(beatsPerMinute);
-  Serial.println("bpm");
-  Serial.print(beatAvg);
-  Serial.println("avg bpm");
-  Serial.print(TempData,1);
-  Serial.println(" \xC2\xB0 C");
+  //Serial.print(beatsPerMinute);
+  //Serial.println("bpm");
+  //Serial.print(beatAvg);
+  //Serial.println("avg bpm");
+  //Serial.print(TempData,1);
+  //Serial.println(" \xC2\xB0 C");
 }
