@@ -16,9 +16,7 @@ class DisplayPage extends StatefulWidget {
   _DisplayPageState createState() => _DisplayPageState();
 }
 
-
 class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStateMixin{
-
   TabController _tabController;
   int tabSet = 0;
   int _radioModeValue;
@@ -32,9 +30,8 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
   List<double> traceDustTemp =List();
   // ignore: deprecated_member_use
   List<double> traceDustBpm =List();
-
+  
   @override
-
   void initState() {
     // TODO: implement initState
     setState(() {
@@ -49,7 +46,6 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
 
   @override
   Widget build(BuildContext context) {
-
     return _login ? firstScaffold() : logInScaffold();
   }
   Widget firstScaffold(){
@@ -251,7 +247,7 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
              buildSetting(context, systemText("Language")),
              SizedBox(height: 20),
              Row(
-               children: [
+               children:[
                  Icon(Icons.settings, color: Colors.indigoAccent,),
                  SizedBox(width: 10),
                  Text(systemText("Other Setting"),
@@ -441,7 +437,6 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
     );
    }
 
-
   Widget logInScaffold(){
     return Scaffold(
       body: Center(
@@ -520,5 +515,4 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
       }
     });
   }
-
 }
