@@ -1,7 +1,28 @@
 {
   "@@locale": "en",
-
-  "hello_world": "Hello World!",
-  
-  }
+  "title": "Welcome to Health Monitor System",
+  "Login": "Login in database",
+  "apptitle": "Health Monitor App",
+  "bpmtitle": "Heart Bit bpm",
+  "temptitle": "Body Temperature",
+  "nowtempis": "Now Temperature",
+  "nowbpm": "Now Heart bit",
+  "°C": "°C",
+  "bpm": "bpm",
+  "Language": "Language Setting",
+  "english": "English",
+  "chinese": "Chinese",
+  "AppTitle": "Health Monitor System",
+  "settingPage": "Main Setting",
+  "Other Setting": "Other Setting",
+  "close": "Close",
+  "fontsize": "Text Size",
+  "small": "S",
+  "medium": "M",
+  "large": "L",
+  "mode": "Light Theme",
+  "lightmode": "Light",
+  "darkmode": "Dark",
+  "call": "Ask for help",
+  "@error": "error"
 }
