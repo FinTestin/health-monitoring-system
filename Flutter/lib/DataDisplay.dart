@@ -246,7 +246,6 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
              ),
              Divider(height: 20, thickness: 1),
              SizedBox(height: 10),
-             //buildSetting(context, "Content Settings"),
              buildSetting(context, systemText("Language")),
              SizedBox(height: 20),
              Row(
@@ -269,7 +268,6 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
                  Container(
                    height: 50,
                    margin: EdgeInsets.all(10),
-                   //width: 110,
                    child: Text(
                      systemText('fontsize'),
                      textAlign: TextAlign.center,
@@ -319,8 +317,6 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
                children: <Widget>[
                  Container(
                    margin: EdgeInsets.all(10),
-                   //height: 60,
-                   //width: 80,
                    child: Text(
                      systemText('mode'),
                      textAlign: TextAlign.center,
@@ -354,7 +350,6 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
                  ),
                ],
              ),
-
              Center(
                child: OutlinedButton(
                  style:OutlinedButton.styleFrom(
@@ -488,26 +483,26 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
   }
 
   void _handleRadioTextValueChange(int value) {
-  setState(() {
-    _radioTextValue = value;
-    switch (_radioTextValue) {
-      case 0:
-        textSizeChange = 0.8;
-        break;
-      case 1:
-        textSizeChange = 1;
-        break;
-      case 2:
-        textSizeChange = 1.2;
-        break;
-    }
-  });
+    setState(() {
+      _radioTextValue = value;
+      switch (_radioTextValue) {
+        case 0:
+          textSizeChange = 0.8;
+          break;
+        case 1:
+          textSizeChange = 1;
+          break;
+        case 2:
+          textSizeChange = 1.2;
+          break;
+      }
+    });
   }
 
   void _handleRadioLanguageValueChange(int value) {
-  setState(() {
-    _radioLanguageValue = value;
-    theLocate = (_radioLanguageValue == 0) ? 'zh' : 'en';
-  });
+    setState(() {
+      _radioLanguageValue = value;
+      theLocate = (_radioLanguageValue == 0) ? 'zh' : 'en';
+    });
   }
 }
