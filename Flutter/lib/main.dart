@@ -4,6 +4,7 @@ import './DataDisplay.dart';
 import 'package:testingesp32/DataDisplay.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:adaptive_theme/adaptive_theme.dart';
+import 'package:testingesp32/l10n/app_localizations.dart';// Testing
 
 void manin() async{
   WidgetsFlutterBinding.ensureInitialized();
