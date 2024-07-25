@@ -210,8 +210,9 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
             ),
             Container(
               padding: const EdgeInsets.only(bottom: 50),
-              child: Text('${systemText('nowbpm')} '
-                  '${_esp.avg.toStringAsFixed(0)} ${systemText('bpm')}',
+              //child: Text('${systemText('nowbpm')} '
+              //    '${_esp.avg.toStringAsFixed(0)} ${systemText('bpm')}',
+              child: Text('${S.of(context).nowbpm}${_esp.avg.toStringAsFixed(0)}${S.of(context).bpm}'),
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 30* textSizeChange
