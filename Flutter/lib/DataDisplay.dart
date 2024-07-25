@@ -15,7 +15,9 @@ class DisplayPage extends StatefulWidget {
   @override
   _DisplayPageState createState() => _DisplayPageState();
 }
-
+class W {
+  static AppLocalizations of(BuildContext context) => AppLocalizations.of(context);
+}
 class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStateMixin{
   TabController _tabController;
   int tabSet = 0;
