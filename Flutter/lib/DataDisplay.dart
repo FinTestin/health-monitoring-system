@@ -283,7 +283,7 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
                    margin: EdgeInsets.all(20),
                    child: Row(
                      children: <Widget>[
-                       Text(systemText('small'),
+                       Text(W.of(context).small),//testing
                          style: TextStyle(fontSize: 16 *textSizeChange),
                        ),
                        new Radio(
@@ -291,7 +291,7 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
                          groupValue: _radioTextValue,
                          onChanged: _handleRadioTextValueChange,
                        ),
-                       Text(systemText('medium'),
+                       Text(W.of(context).medium),
                            style: TextStyle(fontSize: 20 *textSizeChange),
                        ),
                        new Radio(
@@ -299,7 +299,7 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
                          groupValue: _radioTextValue,
                          onChanged: _handleRadioTextValueChange,
                        ),
-                       Text(systemText('large'),
+                       Text(W.of(context).large),
                          style: TextStyle(fontSize: 22 *textSizeChange),
                        ),
                        new Radio(
