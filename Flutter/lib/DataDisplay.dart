@@ -8,7 +8,6 @@ import '/dataHandle.dart';
 import 'package:oscilloscope/oscilloscope.dart';
 import 'package:testingesp32/stringValue.dart';
 import 'package:adaptive_theme/adaptive_theme.dart';
-import 'package:testingesp32/l10n/app_localizations.dart'; 
 
 class DisplayPage extends StatefulWidget {
   final Widget Function(BuildContext context,Brightness brightness) builder;
