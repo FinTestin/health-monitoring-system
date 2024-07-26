@@ -111,7 +111,7 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
         children: [
           Container(
             padding: const EdgeInsets.only(top: 50),
-            child: Text(S.of(context).temptitle),
+            child: Text(W.of(context).temptitle),
               style: TextStyle(fontWeight: FontWeight.bold,
                   fontSize: 30 *textSizeChange
               ),
@@ -148,7 +148,7 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
           ),
           Container(
             padding: const EdgeInsets.only(bottom: 50),
-            child: Text(S.of(context).nowtempis'
+            child: Text(S.of(context).nowtempis)'
                 '${_esp.temp.toStringAsFixed(1)} ${systemText('°C')}',
               style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30* textSizeChange),
             ),
