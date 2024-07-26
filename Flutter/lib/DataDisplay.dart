@@ -111,7 +111,7 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
         children: [
           Container(
             padding: const EdgeInsets.only(top: 50),
-            child: Text(systemText("temptitle"),
+            child: Text(S.of(context).temptitle),
               style: TextStyle(fontWeight: FontWeight.bold,
                   fontSize: 30 *textSizeChange
               ),
@@ -212,7 +212,7 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
               padding: const EdgeInsets.only(bottom: 50),
               //child: Text('${systemText('nowbpm')} '
               //    '${_esp.avg.toStringAsFixed(0)} ${systemText('bpm')}',
-              child: Text('${S.of(context).nowbpm}${_esp.avg.toStringAsFixed(0)}${S.of(context).bpm}'),
+              child: Text('${W.of(context).nowbpm}${_esp.avg.toStringAsFixed(0)}${W.of(context).bpm}'),
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 30* textSizeChange
