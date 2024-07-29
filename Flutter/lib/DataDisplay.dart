@@ -148,7 +148,7 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
           ),
           Container(
             padding: const EdgeInsets.only(bottom: 50),
-            child: Text(S.of(context).nowtempis + "${_esp.temp.toStringAsFixed(1)}" + systemText('°C'),
+            child: Text(W.of(context).nowtempis + "${_esp.temp.toStringAsFixed(1)}" + systemText('°C'),
               style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30* textSizeChange),
             ),
           ),
@@ -234,7 +234,7 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
                children: [
                  Icon(Icons.settings, color: Colors.indigoAccent,),
                  SizedBox(width: 10),
-                 Text(systemText("settingPage"),
+                 Text(W.of(context).settingPage),
                    style: TextStyle(
                        fontSize: 24 * textSizeChange,
                        fontWeight: FontWeight.bold,
@@ -251,7 +251,7 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
                children:[
                  Icon(Icons.settings, color: Colors.indigoAccent,),
                  SizedBox(width: 10),
-                 Text(systemText("Other Setting"),
+                 Text({W.of(context).Other Setting),
                    style: TextStyle(
                      fontSize: 24 *textSizeChange,
                      fontWeight: FontWeight.bold,
@@ -267,8 +267,7 @@ class _DisplayPageState extends State<DisplayPage> with SingleTickerProviderStat
                  Container(
                    height: 50,
                    margin: EdgeInsets.all(10),
-                   child: Text(
-                     systemText('fontsize'),
+                   child: Text(systemText('fontsize'),
                      textAlign: TextAlign.center,
                      style: TextStyle(
                        fontSize: 20 *textSizeChange
